@@ -1,1 +1,159 @@
+# Python Basics – Learning Notes
+
+These notes cover Python fundamentals with simple explanations and examples.
+They focus on logic building, real-world thinking, and beginner-friendly practice.
+
+---
+
+## Step 1: `print()` Function
+
+Python mein screen par text dikhane ke liye `print()` use hota hai.
+
+### Example
+```python
+print("Hello World")
+() kyun zaroori hain?
+print ek function hai
+
+Function ko call karne ke liye round brackets () lagtay hain
+
+Quotation marks " " kyun lagtay hain?
+Quotes ke andar jo ho → text / string hoti hai
+
+print("10")   # text
+print(10)     # number
+Screen par dono 10 print hotay hain, lekin:
+
+"10" → string
+
+10 → integer
+
+Asal farq kahan pata chalta hai?
+print(10 + 5)
+print("10" + "5")
+Output:
+
+15
+105
+Type check:
+
+print(type(10))
+print(type("10"))
+Step 2: Variables (dabba concept)
+Variable aik dabba hota hai jisme hum value store karte hain.
+
+x = 5
+print(x)
+Text variable
+name = "Iqra"
+print(name)
+Number variable
+age = 20
+print(age)
+Rule:
+
+Text → quotes " "
+
+Number → no quotes
+
+Step 3: Print + Variables
+Method 1: Comma (easy)
+print("My name is", name)
+print("My age is", age)
+Method 2: f-string (professional)
+print(f"My name is {name}")
+print(f"My age is {age}")
+❌ Wrong:
+
+print("My age is " + age)
+Step 4: User Input
+Basic input
+name = input("Enter your name: ")
+print("Hello", name)
+Number input
+age = int(input("Enter your age: "))
+print("Your age is", age)
+Step 5: if / else
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You are eligible")
+else:
+    print("You are not eligible")
+Step 6: elif (Multiple conditions)
+age = int(input("Enter your age: "))
+
+if age < 13:
+    print("Child")
+elif age < 20:
+    print("Teenager")
+else:
+    print("Adult")
+⚠️ Indentation zaroori hai (4 spaces)
+
+Step 7: Loops
+for loop
+for i in range(5):
+    print("Hello", i)
+while loop
+count = 0
+
+while count < 5:
+    print("Count is", count)
+    count += 1
+Step 8: Lists
+fruits = ["apple", "banana", "cherry"]
+Access items
+print(fruits[0])
+print(fruits[-1])
+Loop through list
+for fruit in fruits:
+    print(fruit)
+Add / remove
+fruits.append("orange")
+fruits.remove("banana")
+Step 9: Functions
+Simple function
+def greet():
+    print("Hello")
+    print("Welcome to Python")
+
+greet()
+Function with parameter
+def greet(name):
+    print("Hello", name)
+
+greet("Iqra")
+Function with return
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)
+Step 10: Dictionary
+student = {
+    "name": "Iqra",
+    "age": 20,
+    "course": "BSCS"
+}
+Access values
+print(student["name"])
+Loop dictionary
+for key in student:
+    print(key, ":", student[key])
+Step 11: List of Dictionaries (SOC-style)
+logs = [
+    {"ip": "192.168.1.10", "status": "failed"},
+    {"ip": "192.168.1.20", "status": "success"}
+]
+
+for log in logs:
+    if log["status"] == "failed":
+        print("Alert from", log["ip"])
+Step 12: Error Handling (try / except)
+try:
+    age = int(input("Enter age: "))
+    print("Age is", age)
+except ValueError:
+    print("Invalid input")
 
